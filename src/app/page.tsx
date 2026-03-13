@@ -42,10 +42,9 @@ const audience = [
 function WinnyomKeysMark() {
   return (
     <span className={styles.logoMark} aria-hidden="true">
-      <span className={styles.logoStemLeft} />
-      <span className={styles.logoStemRight} />
-      <span className={styles.logoCenter} />
-      <span className={styles.logoKey} />
+      <span className={styles.logoInset}>
+        <span className={styles.logoLetters}>wk</span>
+      </span>
     </span>
   );
 }
