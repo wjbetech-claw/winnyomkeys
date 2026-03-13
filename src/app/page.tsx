@@ -1,18 +1,35 @@
 import { faqs, processSteps, services } from "@/content/site";
 import styles from "./page.module.css";
 
-const trustPoints = [
-  "Seoul-based service focus",
-  "Repair, build, and mod work",
-  "Clear communication before changes",
-  "Minimal, honest presentation with no fake claims",
+const highlights = [
+  "Seoul-based service",
+  "Repair, build, and tuning work",
+  "Korean / English-friendly communication",
 ];
 
-const audiences = [
-  "Mechanical keyboard owners with issues to fix",
-  "Enthusiasts planning a custom build",
-  "People who want a board tuned, repaired, or restored",
-  "Beginners who want straightforward guidance before buying or upgrading",
+const principles = [
+  {
+    title: "Precision over noise",
+    description:
+      "The experience should feel closer to a careful workshop than a loud promo page. The work is detailed, and the site should reflect that.",
+  },
+  {
+    title: "Honest scope",
+    description:
+      "No fake claims, no invented lead times, no vague marketing promises. Just a clear explanation of what can be done and how to begin.",
+  },
+  {
+    title: "Built for trust",
+    description:
+      "Visitors should immediately understand the service, the tone, and the level of care behind repair and custom keyboard work.",
+  },
+];
+
+const audience = [
+  "A board has a problem and you want a sensible diagnosis.",
+  "You want a custom build assembled cleanly and thoughtfully.",
+  "Your keyboard works, but the feel, sound, or tuning is not quite right.",
+  "You are new to mechanical keyboards and want grounded advice before spending more.",
 ];
 
 export default function Home() {
@@ -20,13 +37,11 @@ export default function Home() {
     <main className={styles.page}>
       <section className={styles.hero}>
         <div className={styles.heroCopy}>
-          <p className={styles.eyebrow}>
-            Seoul, Korea · Mechanical keyboard craft
-          </p>
-          <h1>Repair, build, and tune keyboards with care.</h1>
+          <p className={styles.eyebrow}>WinnyomKeys · Seoul, Korea</p>
+          <h1>Clean keyboard work, done with care and restraint.</h1>
           <p className={styles.lead}>
-            WinnyomKeys helps keyboard owners in Seoul understand what is wrong,
-            what can be improved, and what a clean path forward looks like.
+            Repair, build, mod, and tuning support for mechanical keyboards —
+            presented with the same precision the work itself should have.
           </p>
           <div className={styles.ctaRow}>
             <a
@@ -36,45 +51,54 @@ export default function Home() {
               Start an inquiry
             </a>
             <a className={styles.secondaryCta} href="#services">
-              Explore services
+              View services
             </a>
           </div>
-          <ul className={styles.inlineList} aria-label="Trust signals">
-            {trustPoints.map((point) => (
-              <li key={point}>{point}</li>
+          <ul className={styles.highlightRow} aria-label="Service highlights">
+            {highlights.map((item) => (
+              <li key={item}>{item}</li>
             ))}
           </ul>
         </div>
-        <aside className={styles.heroPanel} aria-label="Service positioning">
-          <p className={styles.panelLabel}>What the site should communicate</p>
-          <ul className={styles.panelList}>
-            <li>Careful diagnosis before action</li>
-            <li>Honest scope, no inflated promises</li>
-            <li>Premium feel without unnecessary noise</li>
-            <li>Accessible contact path for real customers</li>
-          </ul>
-        </aside>
+
+        <div className={styles.heroStage} aria-hidden="true">
+          <div className={styles.stageGlow} />
+          <div className={styles.keyboardFrame}>
+            <div className={styles.keyboardTopRow}>
+              <span />
+              <span />
+              <span />
+            </div>
+            <div className={styles.keyboardGrid}>
+              {Array.from({ length: 20 }).map((_, index) => (
+                <span key={index} className={styles.keycap} />
+              ))}
+            </div>
+            <div className={styles.keyboardFooter}>
+              <span className={styles.boardLabel}>
+                fine tuning · repair · build
+              </span>
+              <span className={styles.boardAccent} />
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section className={styles.section} aria-labelledby="value-title">
-        <div className={styles.sectionHeader}>
-          <p className={styles.sectionLabel}>Value proposition</p>
-          <h2 id="value-title">
-            A practical service for people who want their keyboard handled
-            properly.
+      <section className={styles.sectionBand} aria-labelledby="intro-title">
+        <div className={styles.sectionIntro}>
+          <p className={styles.sectionLabel}>Positioning</p>
+          <h2 id="intro-title">
+            A landing page for a specialist service, not a generic storefront.
           </h2>
         </div>
-        <div className={styles.gridTwo}>
-          <p>
-            The goal is simple: help visitors quickly understand what
-            WinnyomKeys does, who it is for, and how to get in touch without
-            wading through fluff or inflated marketing language.
-          </p>
-          <p>
-            The tone stays calm, precise, and professional so the site feels
-            credible for repairs, custom builds, tuning work, and technical
-            troubleshooting.
-          </p>
+        <div className={styles.introGrid}>
+          {principles.map((principle) => (
+            <article className={styles.glassCard} key={principle.title}>
+              <p className={styles.cardLabel}>Principle</p>
+              <h3>{principle.title}</h3>
+              <p>{principle.description}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -86,12 +110,16 @@ export default function Home() {
         <div className={styles.sectionHeader}>
           <p className={styles.sectionLabel}>Services</p>
           <h2 id="services-title">
-            Focused services for real keyboard problems and projects.
+            Focused work for mechanical keyboards that need attention,
+            refinement, or a full build path.
           </h2>
         </div>
-        <div className={styles.cardGrid}>
-          {services.map((service) => (
-            <article className={styles.card} key={service.title}>
+        <div className={styles.serviceGrid}>
+          {services.map((service, index) => (
+            <article className={styles.serviceCard} key={service.title}>
+              <p className={styles.cardIndex}>
+                {String(index + 1).padStart(2, "0")}
+              </p>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
             </article>
@@ -100,19 +128,22 @@ export default function Home() {
       </section>
 
       <section className={styles.section} aria-labelledby="audience-title">
-        <div className={styles.sectionHeader}>
-          <p className={styles.sectionLabel}>Who this is for</p>
-          <h2 id="audience-title">
-            Built for both enthusiasts and people who just want their keyboard
-            working right.
-          </h2>
-        </div>
-        <div className={styles.cardGrid}>
-          {audiences.map((audience) => (
-            <article className={styles.card} key={audience}>
-              <p>{audience}</p>
-            </article>
-          ))}
+        <div className={styles.splitLayout}>
+          <div className={styles.sectionHeaderCompact}>
+            <p className={styles.sectionLabel}>Who it is for</p>
+            <h2 id="audience-title">
+              Good for enthusiasts, useful for beginners, and clear for people
+              who just want their board sorted out properly.
+            </h2>
+          </div>
+          <div className={styles.audienceList}>
+            {audience.map((item) => (
+              <article className={styles.lineCard} key={item}>
+                <span className={styles.lineMarker} />
+                <p>{item}</p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -120,7 +151,7 @@ export default function Home() {
         <div className={styles.sectionHeader}>
           <p className={styles.sectionLabel}>Workflow</p>
           <h2 id="workflow-title">
-            A simple process that keeps expectations clear.
+            The process stays simple so expectations stay clean.
           </h2>
         </div>
         <div className={styles.timeline}>
@@ -136,7 +167,7 @@ export default function Home() {
       <section className={styles.section} aria-labelledby="faq-title">
         <div className={styles.sectionHeader}>
           <p className={styles.sectionLabel}>FAQ</p>
-          <h2 id="faq-title">Clear answers for the basics.</h2>
+          <h2 id="faq-title">Straight answers, without the usual filler.</h2>
         </div>
         <div className={styles.faqList}>
           {faqs.map((faq) => (
@@ -154,15 +185,13 @@ export default function Home() {
       >
         <div>
           <p className={styles.sectionLabel}>Contact</p>
-          <h2 id="contact-title">
-            Send a short message and start with the keyboard you already have.
-          </h2>
+          <h2 id="contact-title">Start with the keyboard you already have.</h2>
           <p>
-            Best first message: keyboard model, issue or goal, any parts already
-            involved, and where you are based in Seoul or nearby.
+            Send the keyboard model, what feels wrong or what you want improved,
+            any relevant parts, and where you are based.
           </p>
         </div>
-        <div className={styles.contactActions}>
+        <div className={styles.contactPanel}>
           <a className={styles.primaryCta} href="mailto:hello@winnyomkeys.com">
             hello@winnyomkeys.com
           </a>
@@ -174,8 +203,11 @@ export default function Home() {
       </section>
 
       <footer className={styles.footer}>
-        <p>WinnyomKeys · Seoul, Korea</p>
-        <p>Mechanical keyboard repair, builds, tuning, and troubleshooting.</p>
+        <p>WinnyomKeys</p>
+        <p>
+          Mechanical keyboard repair, builds, tuning, and troubleshooting in
+          Seoul.
+        </p>
       </footer>
     </main>
   );
