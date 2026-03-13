@@ -17,45 +17,45 @@ export const services: Service[] = [
   {
     title: "Repair & troubleshooting",
     description:
-      "Diagnosis for inconsistent keys, dead inputs, stabilizer rattle, and general keyboard issues before recommending the next step.",
+      "Diagnosis for inconsistent keys, dead inputs, stabilizer rattle, intermittent behavior, and other practical keyboard issues before recommending the next step.",
   },
   {
     title: "Build & assembly",
     description:
-      "Custom keyboard assembly for enthusiasts who want a clean, careful build with attention to feel, acoustics, and part compatibility.",
+      "Careful custom keyboard assembly for enthusiasts who want a board put together cleanly, with attention to compatibility, feel, and final presentation.",
   },
   {
     title: "Modding & tuning",
     description:
-      "Stabilizer tuning, switch replacement, lubrication, foam adjustments, and practical refinements that improve daily typing.",
+      "Stabilizer tuning, switch replacement, lubrication, acoustic refinement, and other small changes that improve how a keyboard sounds and feels day to day.",
   },
   {
-    title: "Guidance for buyers",
+    title: "Buyer guidance",
     description:
-      "Friendly support for people choosing their first mechanical keyboard or deciding whether a board is worth repairing or upgrading.",
+      "Straightforward support for people choosing a first keyboard, deciding whether a board is worth repairing, or figuring out a sensible upgrade path.",
   },
 ];
 
 export const processSteps: ProcessStep[] = [
   {
-    title: "1. Tell me what you have",
+    title: "1. Share the board and the goal",
     description:
-      "Share your keyboard model, your goal, and any symptoms or preferences. Korean/English communication can be supported.",
+      "Start with the keyboard model, the issue or desired result, and any relevant parts or prior work already involved.",
   },
   {
-    title: "2. Review the issue or build plan",
+    title: "2. Review what is realistic",
     description:
-      "You get a clear response on what can likely be done, what details are still needed, and what remains unknown.",
+      "You get a grounded response about likely options, missing details, and whether the project sounds straightforward or uncertain.",
   },
   {
-    title: "3. Confirm scope before work starts",
+    title: "3. Confirm scope before hands-on work",
     description:
-      "No inflated promises. Scope stays explicit so repair, build, or mod work is aligned before hands-on changes begin.",
+      "Repair, build, or tuning work should begin only after the direction is clear enough to avoid confusion and overpromising.",
   },
   {
-    title: "4. Receive your keyboard back with confidence",
+    title: "4. Get a cleaner final result",
     description:
-      "The goal is a keyboard that feels more dependable, better tuned, and easier to enjoy or maintain long term.",
+      "The aim is a keyboard that feels more dependable, more refined, or simply more enjoyable to keep using long term.",
   },
 ];
 
@@ -63,21 +63,21 @@ export const faqs: FAQ[] = [
   {
     question: "What kinds of keyboards do you work on?",
     answer:
-      "The service is aimed at mechanical keyboards, including prebuilts, enthusiast kits, and custom builds where parts and condition make the work practical.",
+      "The focus is mechanical keyboards, including prebuilts, enthusiast kits, and custom builds where the parts and condition make the work practical.",
   },
   {
-    question: "Do you publish fixed pricing or turnaround times?",
+    question: "Do you list fixed pricing or turnaround times?",
     answer:
-      "Not yet. Scope varies a lot by keyboard, parts, and the issue involved, so final details are discussed directly instead of being guessed on the site.",
+      "Not yet. Scope varies too much by keyboard, parts, and the issue involved, so those details are discussed directly rather than guessed publicly.",
   },
   {
     question: "Can you help if I am new to mechanical keyboards?",
     answer:
-      "Yes. Beginner-friendly guidance is part of the offer, especially when the goal is to avoid unnecessary purchases or choose a sensible next step.",
+      "Yes. The service is not only for longtime enthusiasts. Beginner-friendly guidance is part of the offer when it helps avoid unnecessary purchases or mistakes.",
   },
   {
-    question: "How do I get started?",
+    question: "How should I start an inquiry?",
     answer:
-      "Use the contact call-to-action and send a short message with your keyboard model, what is wrong or what you want improved, and where you are based.",
+      "Send the keyboard model, what is wrong or what you want improved, any parts already involved, and where you are based. That is usually enough to begin the conversation.",
   },
 ];
