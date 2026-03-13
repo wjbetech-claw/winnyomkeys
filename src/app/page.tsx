@@ -1,6 +1,13 @@
 import { faqs, processSteps, services } from "@/content/site";
 import styles from "./page.module.css";
 
+const navItems = [
+  { label: "Services", href: "#services" },
+  { label: "Workflow", href: "#workflow" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Contact", href: "#contact" },
+];
+
 const highlights = [
   "Seoul-based service",
   "Repair, build, and tuning work",
@@ -32,10 +39,39 @@ const audience = [
   "You are new to mechanical keyboards and want grounded advice before spending more.",
 ];
 
+function WinnyomKeysMark() {
+  return (
+    <span className={styles.logoMark} aria-hidden="true">
+      <span className={styles.logoStemLeft} />
+      <span className={styles.logoStemRight} />
+      <span className={styles.logoCenter} />
+      <span className={styles.logoKey} />
+    </span>
+  );
+}
+
 export default function Home() {
   return (
     <main className={styles.page}>
-      <section className={styles.hero}>
+      <header className={styles.navbar}>
+        <a className={styles.brand} href="#top" aria-label="WinnyomKeys home">
+          <WinnyomKeysMark />
+          <span className={styles.brandTextWrap}>
+            <span className={styles.brandName}>WinnyomKeys</span>
+            <span className={styles.brandMeta}>Seoul keyboard craft</span>
+          </span>
+        </a>
+
+        <nav className={styles.navLinks} aria-label="Primary navigation">
+          {navItems.map((item) => (
+            <a key={item.href} href={item.href}>
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      </header>
+
+      <section className={styles.hero} id="top">
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>WinnyomKeys · Seoul, Korea</p>
           <h1>Clean keyboard work, done with care and restraint.</h1>
@@ -147,7 +183,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.section} aria-labelledby="workflow-title">
+      <section
+        className={styles.section}
+        id="workflow"
+        aria-labelledby="workflow-title"
+      >
         <div className={styles.sectionHeader}>
           <p className={styles.sectionLabel}>Workflow</p>
           <h2 id="workflow-title">
@@ -164,7 +204,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.section} aria-labelledby="faq-title">
+      <section className={styles.section} id="faq" aria-labelledby="faq-title">
         <div className={styles.sectionHeader}>
           <p className={styles.sectionLabel}>FAQ</p>
           <h2 id="faq-title">Straight answers, without the usual filler.</h2>
@@ -181,6 +221,7 @@ export default function Home() {
 
       <section
         className={styles.contactSection}
+        id="contact"
         aria-labelledby="contact-title"
       >
         <div>
