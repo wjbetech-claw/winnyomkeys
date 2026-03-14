@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -44,14 +45,29 @@ export const metadata: Metadata = {
   category: "technology",
 };
 
+const themeScript = `
+(function() {
+  try {
+    var saved = localStorage.getItem('winnyomkeys-theme');
+    var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var theme = saved || (systemDark ? 'dark' : 'light');
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+  } catch (e) {}
+})();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Script id="theme-init" strategy="beforeInteractive">
+          {themeScript}
+        </Script>
         {children}
       </body>
     </html>
