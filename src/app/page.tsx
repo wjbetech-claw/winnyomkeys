@@ -1,9 +1,8 @@
-import { faqs, processSteps, services } from "@/content/site";
+import { faqs, services } from "@/content/site";
 import styles from "./page.module.css";
 
 const navItems = [
   { label: "Services", href: "#services" },
-  { label: "Workflow", href: "#workflow" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
@@ -220,27 +219,6 @@ export default function Home() {
               </article>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section
-        className={styles.section}
-        id="workflow"
-        aria-labelledby="workflow-title"
-      >
-        <div className={styles.sectionHeader}>
-          <p className={styles.sectionLabel}>Workflow</p>
-          <h2 id="workflow-title">
-            The process stays simple so expectations stay clean.
-          </h2>
-        </div>
-        <div className={styles.timeline}>
-          {processSteps.map((step) => (
-            <article className={styles.timelineItem} key={step.title}>
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
-            </article>
-          ))}
         </div>
       </section>
 
