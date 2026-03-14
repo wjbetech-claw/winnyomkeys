@@ -1,3 +1,4 @@
+import { ThemeToggle } from "@/components/theme-toggle";
 import { faqs, services } from "@/content/site";
 import styles from "./page.module.css";
 
@@ -60,13 +61,16 @@ export default function Home() {
           </span>
         </a>
 
-        <nav className={styles.navLinks} aria-label="Primary navigation">
-          {navItems.map((item) => (
-            <a key={item.href} href={item.href}>
-              {item.label}
-            </a>
-          ))}
-        </nav>
+        <div className={styles.navbarRight}>
+          <nav className={styles.navLinks} aria-label="Primary navigation">
+            {navItems.map((item) => (
+              <a key={item.href} href={item.href}>
+                {item.label}
+              </a>
+            ))}
+          </nav>
+          <ThemeToggle />
+        </div>
       </header>
 
       <section className={styles.hero} id="top">

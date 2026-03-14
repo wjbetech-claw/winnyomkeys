@@ -30,9 +30,9 @@
   padding: 12px 14px;
   border: 1px solid var(--border);
   border-radius: 22px;
-  background: rgba(10, 13, 18, 0.7);
+  background: var(--navbar-bg);
   backdrop-filter: blur(18px);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--navbar-shadow);
 }
 
 .brand {
@@ -98,6 +98,14 @@
   text-transform: uppercase;
 }
 
+.navbarRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-left: auto;
+}
+
 .navLinks {
   display: none;
   align-items: center;
@@ -119,8 +127,53 @@
 .navLinks a:hover,
 .navLinks a:focus-visible {
   color: var(--foreground);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--pill-hover);
   transform: translateY(-1px);
+}
+
+.themeToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--pill-bg);
+  color: var(--foreground);
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.themeToggle:hover,
+.themeToggle:focus-visible {
+  transform: translateY(-1px);
+  background: var(--pill-hover);
+}
+
+.themeToggleTrack {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+}
+
+.themeToggleIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  font-size: 0.95rem;
+}
+
+.themeToggleLabel {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 .hero {
@@ -138,7 +191,6 @@
 .serviceCard,
 .glassCard,
 .lineCard,
-.timelineItem,
 .faqItem,
 .contactSection {
   animation: rise-in 720ms ease both;
@@ -210,7 +262,7 @@
 }
 
 .secondaryCta {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--pill-bg);
   color: var(--foreground);
 }
 
@@ -234,7 +286,7 @@
   padding: 10px 14px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--pill-bg);
   color: var(--soft-text);
   font-size: 0.95rem;
   backdrop-filter: blur(10px);
@@ -401,7 +453,6 @@
 .glassCard,
 .serviceCard,
 .lineCard,
-.timelineItem,
 .faqItem,
 .contactSection {
   border: 1px solid var(--border);
@@ -439,7 +490,6 @@
 
 .introGrid,
 .serviceGrid,
-.timeline,
 .faqList,
 .audienceList {
   display: grid;
@@ -452,7 +502,6 @@
 
 .glassCard,
 .serviceCard,
-.timelineItem,
 .lineCard {
   border-radius: 24px;
   padding: 22px;
@@ -460,7 +509,6 @@
 
 .glassCard h3,
 .serviceCard h3,
-.timelineItem h3,
 .faqItem summary {
   font-size: 1.12rem;
   line-height: 1.35;
@@ -468,7 +516,6 @@
 
 .glassCard p:last-child,
 .serviceCard p:last-child,
-.timelineItem p,
 .lineCard p,
 .faqItem p,
 .contactSection p {
@@ -499,28 +546,6 @@
   margin-top: 0.55rem;
   background: linear-gradient(135deg, #dce4ff, #7f97ff);
   box-shadow: 0 0 0 6px rgba(140, 164, 255, 0.08);
-}
-
-.timeline {
-  counter-reset: item;
-}
-
-.timelineItem {
-  position: relative;
-  overflow: hidden;
-}
-
-.timelineItem::after {
-  content: "";
-  position: absolute;
-  inset: auto -10% 0 auto;
-  width: 120px;
-  height: 120px;
-  background: radial-gradient(
-    circle,
-    rgba(140, 164, 255, 0.14),
-    transparent 70%
-  );
 }
 
 .faqItem {
@@ -600,7 +625,6 @@
   .serviceCard,
   .glassCard,
   .lineCard,
-  .timelineItem,
   .faqItem,
   .contactSection,
   .stageGlow {
@@ -609,7 +633,8 @@
 
   .primaryCta,
   .secondaryCta,
-  .navLinks a {
+  .navLinks a,
+  .themeToggle {
     transition: none;
   }
 
@@ -628,8 +653,7 @@
   }
 
   .introGrid,
-  .serviceGrid,
-  .timeline {
+  .serviceGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
