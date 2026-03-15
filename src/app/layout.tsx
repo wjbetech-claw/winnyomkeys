@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
@@ -11,6 +12,29 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  variable: "--font-space-grotesk",
+});
+
+const datatype = localFont({
+  src: [
+    {
+      path: "../../public/fonts/datatype-400.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/datatype-600.ttf",
+      weight: "600",
+      style: "normal",
+    },
+  ],
+  variable: "--font-datatype",
+  display: "swap",
 });
 
 const siteName = "winnyomkeys";
@@ -64,7 +88,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${datatype.variable}`}
+      >
         <Script id="theme-init" strategy="beforeInteractive">
           {themeScript}
         </Script>

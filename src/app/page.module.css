@@ -104,8 +104,10 @@
 
 .brandName {
   font-size: 0.98rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.03em;
+  font-family:
+    var(--font-datatype), "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .brandMeta {
@@ -135,6 +137,8 @@
   border-radius: 999px;
   color: var(--soft-text);
   font-size: 0.94rem;
+  font-family:
+    var(--font-datatype), "Helvetica Neue", Helvetica, Arial, sans-serif;
   transition:
     color 180ms ease,
     background-color 180ms ease,
@@ -154,7 +158,7 @@
   justify-content: center;
   min-height: 44px;
   min-width: 44px;
-  padding: 0;
+  padding: 0 4px 0 0;
   border: 1px solid var(--border);
   border-radius: 999px;
   background: var(--pill-bg);
@@ -568,12 +572,6 @@
 .faqItem {
   border-radius: 22px;
   padding: 20px 22px;
-}
-
-.faqItem summary {
-  cursor: pointer;
-  list-style: none;
-  font-weight: 600;
 }
 
 .faqItem summary::-webkit-details-marker {
