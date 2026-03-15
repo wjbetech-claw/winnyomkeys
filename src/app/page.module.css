@@ -2,7 +2,7 @@
   position: relative;
   width: min(1180px, 100%);
   margin: 0 auto;
-  padding: 104px 20px 72px;
+  padding: 104px clamp(16px, 4vw, 40px) 72px;
 }
 
 .page::before {
@@ -21,15 +21,15 @@
 .navbar {
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
   z-index: 30;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: 16px clamp(20px, 4vw, 36px);
+  padding: 16px clamp(16px, 4vw, 36px);
   border-radius: 0;
   background: transparent;
   backdrop-filter: blur(20px);
@@ -199,7 +199,7 @@
   gap: 36px;
   align-items: center;
   min-height: calc(100vh - 112px);
-  padding: 32px 0 32px;
+  padding: 0px 0 32px;
 }
 
 .heroCopy,
