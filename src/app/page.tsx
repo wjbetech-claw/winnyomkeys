@@ -56,8 +56,8 @@ export default function Home() {
         <a className={styles.brand} href="#top" aria-label="WinnyomKeys home">
           <WinnyomKeysMark />
           <span className={styles.brandTextWrap}>
-            <span className={styles.brandName}>WinnyomKeys</span>
-            <span className={styles.brandMeta}>Seoul keyboard craft</span>
+            <span className={styles.brandName}>winnyomkeys</span>
+            <span className={styles.brandMeta}>Mech. Keyboards | Seoul</span>
           </span>
         </a>
 

@@ -6,8 +6,6 @@
   --muted: #8d97a4;
   --soft-text: #c5cdd6;
   --accent: #8ca4ff;
-  --navbar-bg: rgba(10, 13, 18, 0.7);
-  --navbar-shadow: 0 18px 50px rgba(0, 0, 0, 0.2);
   --pill-bg: rgba(255, 255, 255, 0.03);
   --pill-hover: rgba(255, 255, 255, 0.05);
   --hero-bg:
@@ -28,8 +26,6 @@ html[data-theme="light"] {
   --muted: #7f7365;
   --soft-text: #4e453b;
   --accent: #5e72d8;
-  --navbar-bg: rgba(255, 251, 245, 0.78);
-  --navbar-shadow: 0 18px 50px rgba(88, 68, 44, 0.1);
   --pill-bg: rgba(74, 58, 39, 0.04);
   --pill-hover: rgba(74, 58, 39, 0.08);
   --hero-bg:

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteName = "WinnyomKeys";
+const siteName = "winnyomkeys";
 const siteDescription =
   "Mechanical keyboard repair, builds, and tuning in Seoul, Korea. Clean, careful service for repairs, mods, troubleshooting, and custom builds.";
 const siteUrl = "https://winnyomkeys.com";
