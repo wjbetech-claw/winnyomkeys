@@ -1,99 +1,37 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
+import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["400", "600"],
-  variable: "--font-space-grotesk",
-});
-
-const datatype = localFont({
-  src: [
-    {
-      path: "../../public/fonts/datatype-400.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/datatype-600.ttf",
-      weight: "600",
-      style: "normal",
-    },
-  ],
-  variable: "--font-datatype",
-  display: "swap",
-});
-
-const siteName = "winnyomkeys";
-const siteDescription =
-  "Mechanical keyboard repair, builds, and tuning in Seoul, Korea. Clean, careful service for repairs, mods, troubleshooting, and custom builds.";
-const siteUrl = "https://winnyomkeys.com";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: {
-    default: `${siteName} | Keyboard Repair & Custom Builds in Seoul`,
-    template: `%s | ${siteName}`,
-  },
-  description: siteDescription,
-  applicationName: siteName,
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title: `${siteName} | Keyboard Repair & Custom Builds in Seoul`,
-    description: siteDescription,
-    url: siteUrl,
-    siteName,
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: `${siteName} | Keyboard Repair & Custom Builds in Seoul`,
-    description: siteDescription,
-  },
-  category: "technology",
+  title: "Winny Omkeys",
+  description: "Winny Omkeys",
 };
 
-const themeScript = `
-(function() {
-  try {
-    var saved = localStorage.getItem('winnyomkeys-theme');
-    var systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    var theme = saved || (systemDark ? 'dark' : 'light');
-    document.documentElement.dataset.theme = theme;
-    document.documentElement.style.colorScheme = theme;
-  } catch (e) {}
-})();
-`;
+const themeScript = `(function () {
+  const storedTheme = window.localStorage.getItem("theme");
+  const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+  const theme = storedTheme || (prefersLight ? "light" : "dark");
+  document.documentElement.dataset.theme = theme;
+  if (theme === "dark") {
+    document.documentElement.classList.add("dark");
+  }
+})();`;
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${datatype.variable}`}
-      >
-        <Script id="theme-init" strategy="beforeInteractive">
-          {themeScript}
-        </Script>
+    <html lang="en">
+      <body className={inter.variable}>
+        <Script id="theme-script">{themeScript}</Script>
         {children}
       </body>
     </html>

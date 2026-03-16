@@ -60,7 +60,7 @@ function WinnyomKeysMark() {
 
 export default function Home() {
   return (
-    <main className={styles.page}>
+    <main id="top" className={styles.page}>
       <header className={styles.navbar}>
         <a className={styles.brand} href="#top" aria-label="WinnyomKeys home">
           <WinnyomKeysMark />
