@@ -13,10 +13,9 @@ export function HeroSection({ highlights }: HeroSectionProps) {
   return (
     <section className={styles.hero} id="hero">
       <div className={styles.heroCopy}>
-        <h1>Mechanical keyboard workshop in Seoul.</h1>
+        <h1>Mechanical keyboard workshop.</h1>
         <p className={styles.lead}>
-          Repair, build, mod, and tuning support for mechanical keyboards,
-          presented with the same precision the work itself should have.
+          Repair & modding studio based in Seoul, Korea.
         </p>
         <ul className={styles.highlightRow} aria-label="Service highlights">
           {highlights.map((item) => (
@@ -27,7 +26,7 @@ export function HeroSection({ highlights }: HeroSectionProps) {
           <a className={styles.primaryCta} href="mailto:hello@winnyomkeys.com">
             Start an inquiry
           </a>
-          <a className={styles.secondaryCta} href="#services">
+          <a className={styles.secondaryCta} href="#services-header">
             View services
           </a>
         </div>

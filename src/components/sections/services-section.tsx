@@ -12,8 +12,10 @@ export function ServicesSection({ services }: ServicesSectionProps) {
       id="services"
       aria-labelledby="services-title"
     >
-      <div className={styles.sectionHeader}>
-        <p className={styles.sectionLabel}>Services</p>
+      <div
+        className={`${styles.sectionHeader} ${styles.servicesHeader}`}
+        id="services-header"
+      >
         <h2 id="services-title">
           Focused work for mechanical keyboards that need attention, refinement,
           or a full build path.

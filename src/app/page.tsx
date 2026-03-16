@@ -5,7 +5,6 @@ import {
   FooterSection,
   FaqSection,
   HeroSection,
-  PrinciplesSection,
   ServicesSection,
 } from "@/components/sections";
 import { faqs, services } from "@/content/site";
@@ -21,24 +20,6 @@ const highlights = [
   "Seoul-based service",
   "Repair, build, and tuning work",
   "Korean / English-friendly communication",
-];
-
-const principles = [
-  {
-    title: "Precision over noise",
-    description:
-      "The experience should feel closer to a careful workshop than a loud promo page. The work is detailed, and the site should reflect that.",
-  },
-  {
-    title: "Honest scope",
-    description:
-      "No fake claims, no invented lead times, no vague marketing promises. Just a clear explanation of what can be done and how to begin.",
-  },
-  {
-    title: "Built for trust",
-    description:
-      "Visitors should immediately understand the service, the tone, and the level of care behind repair and custom keyboard work.",
-  },
 ];
 
 const audience = [
@@ -83,7 +64,6 @@ export default function Home() {
       </header>
 
       <HeroSection highlights={highlights} />
-      <PrinciplesSection principles={principles} />
       <ServicesSection services={services} />
       <AudienceSection audience={audience} />
       <FaqSection faqs={faqs} />
