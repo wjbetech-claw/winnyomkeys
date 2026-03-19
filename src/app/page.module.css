@@ -683,6 +683,7 @@
   gap: 10px;
 }
 
+.sectionHeader h1,
 .sectionHeader h2,
 .sectionHeaderCompact h2,
 .sectionIntro h2,
@@ -698,6 +699,10 @@
   justify-items: center;
   text-align: center;
   scroll-margin-top: 120px;
+}
+
+.servicesSection {
+  min-height: 100vh;
 }
 
 .servicesHeader h2 {
@@ -723,6 +728,11 @@
   padding: 22px;
 }
 
+.serviceCard {
+  display: grid;
+  gap: 8px;
+}
+
 .glassCard h3,
 .serviceCard h3,
 .faqItem summary {
@@ -741,6 +751,45 @@
 
 .cardIndex {
   margin-bottom: 14px;
+}
+
+.serviceCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.serviceCardTop .cardIndex {
+  margin-bottom: 0;
+}
+
+.serviceIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+    rgba(10, 12, 16, 0.4);
+  color: rgba(232, 238, 249, 0.92);
+}
+
+.serviceIcon svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.serviceCard h3 {
+  margin-top: 2px;
+}
+
+.serviceCard h3 + p {
+  margin-top: 0;
 }
 
 .splitLayout {
@@ -909,6 +958,10 @@
 
   .hero {
     grid-template-columns: minmax(0, 1.06fr) minmax(360px, 0.94fr);
+  }
+
+  .contactSection {
+    margin-top: 88px;
   }
 
   .introGrid,

@@ -1,23 +1,12 @@
 import { ThemeToggle } from "@/components/theme-toggle";
-import {
-  ContactSection,
-  FooterSection,
-  HeroSection,
-  ServicesSection,
-} from "@/components/sections";
-import { services } from "@/content/site";
-import styles from "./page.module.css";
+import { FooterSection } from "@/components/sections";
+import { faqs } from "@/content/site";
+import styles from "../page.module.css";
 
 const navItems = [
-  { label: "Services", href: "#services" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "#contact" },
-];
-
-const highlights = [
-  "Seoul-based service",
-  "Repair, build, and tuning work",
-  "Korean / English-friendly communication",
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/#services" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 function WinnyomKeysMark() {
@@ -30,11 +19,11 @@ function WinnyomKeysMark() {
   );
 }
 
-export default function Home() {
+export default function FaqPage() {
   return (
-    <main id="top" className={styles.page}>
+    <main className={styles.page}>
       <header className={styles.navbar}>
-        <a className={styles.brand} href="#top" aria-label="WinnyomKeys home">
+        <a className={styles.brand} href="/" aria-label="WinnyomKeys home">
           <WinnyomKeysMark />
           <span className={styles.brandTextWrap}>
             <span className={styles.brandName}>winnyomkeys</span>
@@ -54,9 +43,21 @@ export default function Home() {
         </div>
       </header>
 
-      <HeroSection highlights={highlights} />
-      <ServicesSection services={services} />
-      <ContactSection />
+      <section className={styles.section} aria-labelledby="faq-page-title">
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionLabel}>FAQ</p>
+          <h1 id="faq-page-title">Straight answers, without the usual filler.</h1>
+        </div>
+        <div className={styles.faqList}>
+          {faqs.map((faq) => (
+            <details className={styles.faqItem} key={faq.question}>
+              <summary>{faq.question}</summary>
+              <p>{faq.answer}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
       <FooterSection />
     </main>
   );

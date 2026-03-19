@@ -15,24 +15,24 @@ export type FAQ = {
 
 export const services: Service[] = [
   {
-    title: "Repair & troubleshooting",
+    title: "Repairs",
     description:
-      "Diagnosis for inconsistent keys, dead inputs, stabilizer rattle, intermittent behavior, and other practical keyboard issues before recommending the next step.",
+      "Electronic repairs, replacement parts, dead switches and all other bumps and rattles.",
   },
   {
-    title: "Build & assembly",
+    title: "Assembly",
     description:
-      "Careful custom keyboard assembly for enthusiasts who want a board put together cleanly, with attention to compatibility, feel, and final presentation.",
+      "Careful custom keyboard assembly for enthusiasts who want a board put together cleanly.",
   },
   {
-    title: "Modding & tuning",
+    title: "Modding",
     description:
-      "Stabilizer tuning, switch replacement, lubrication, acoustic refinement, and other small changes that improve how a keyboard sounds and feels day to day.",
+      "Stabilizer tuning, switch replacement, lubrication, acoustic refinement, and more.",
   },
   {
-    title: "Buyer guidance",
+    title: "Guidance",
     description:
-      "Straightforward support for people choosing a first keyboard, deciding whether a board is worth repairing, or figuring out a sensible upgrade path.",
+      "Straightforward advice and support for beginners and longtime enthusiasts alike.",
   },
 ];
 
