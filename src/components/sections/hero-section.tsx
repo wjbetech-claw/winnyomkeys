@@ -23,7 +23,7 @@ export function HeroSection({ highlights }: HeroSectionProps) {
           ))}
         </ul>
         <div className={styles.ctaRow}>
-          <a className={styles.primaryCta} href="mailto:hello@winnyomkeys.com">
+          <a className={styles.primaryCta} href="mailto:winnyomkeys@gmail.com">
             Start an inquiry
           </a>
           <a className={styles.secondaryCta} href="#services-header">

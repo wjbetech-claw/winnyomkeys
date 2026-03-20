@@ -16,12 +16,12 @@ export function ContactSection() {
         </p>
       </div>
       <div className={styles.contactPanel}>
-        <a className={styles.primaryCta} href="mailto:hello@winnyomkeys.com">
-          hello@winnyomkeys.com
+        <a className={styles.primaryCta} href="mailto:winnyomkeys@gmail.com">
+          winnyomkeys@gmail.com
         </a>
         <p className={styles.contactNote}>
-          Placeholder contact email. Replace with the real business contact
-          channel before launch.
+          Use this email for inquiries until the final business contact channel
+          is confirmed.
         </p>
       </div>
     </section>

@@ -11,7 +11,7 @@
 
 - `src/app/` contains route files, metadata routes, and app-level styles
 - `src/content/` contains typed content structures for the landing page
-- `docs/` contains product, workflow, and engineering rules
+- `docs/` contains product and engineering rules
 
 ## Folder structure rules
 

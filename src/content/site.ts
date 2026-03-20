@@ -3,11 +3,6 @@ export type Service = {
   description: string;
 };
 
-export type ProcessStep = {
-  title: string;
-  description: string;
-};
-
 export type FAQ = {
   question: string;
   answer: string;
@@ -33,29 +28,6 @@ export const services: Service[] = [
     title: "Guidance",
     description:
       "Straightforward advice and support for beginners and longtime enthusiasts alike.",
-  },
-];
-
-export const processSteps: ProcessStep[] = [
-  {
-    title: "1. Share the board and the goal",
-    description:
-      "Start with the keyboard model, the issue or desired result, and any relevant parts or prior work already involved.",
-  },
-  {
-    title: "2. Review what is realistic",
-    description:
-      "You get a grounded response about likely options, missing details, and whether the project sounds straightforward or uncertain.",
-  },
-  {
-    title: "3. Confirm scope before hands-on work",
-    description:
-      "Repair, build, or tuning work should begin only after the direction is clear enough to avoid confusion and overpromising.",
-  },
-  {
-    title: "4. Get a cleaner final result",
-    description:
-      "The aim is a keyboard that feels more dependable, more refined, or simply more enjoyable to keep using long term.",
   },
 ];
 

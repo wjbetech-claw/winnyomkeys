@@ -11,7 +11,7 @@
 Confirm and update:
 
 - real production domain
-- real inquiry/contact channel
+- inquiry/contact channel: winnyomkeys@gmail.com
 - final metadata copy
 - social preview assets if desired
 - any legal/privacy requirements

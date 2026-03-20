@@ -2,11 +2,13 @@
 
 ## Product summary
 
-WinnyomKeys is a landing page for a Seoul-based personal business focused on mechanical keyboard repair, custom builds, modding, tuning, and troubleshooting.
+WinnyomKeys is a landing page and FAQ site for a Seoul-based personal business focused on mechanical keyboard repair, custom builds, modding, tuning, and troubleshooting.
 
 ## Primary objective
 
 Create a clean, premium, trustworthy website that explains the service quickly, supports inquiries clearly, and stays easy to maintain as the business grows.
+
+The homepage is intentionally lightweight: it focuses on the hero, services, contact path, and footer rather than a longer workflow section.
 
 ## Business goals
 

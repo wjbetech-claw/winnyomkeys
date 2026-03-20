@@ -58,7 +58,7 @@ npm run validate
 
 Replace placeholders before launch:
 
-- real contact email / inquiry channel
+- contact email / inquiry channel: winnyomkeys@gmail.com
 - final production domain confirmation
 - final copy refinements
 - social preview assets if needed

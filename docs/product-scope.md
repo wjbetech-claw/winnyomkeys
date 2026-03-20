@@ -2,14 +2,13 @@
 
 ## V1 in scope
 
-- Single-page landing page
+- Landing page for the core homepage experience
+- Separate FAQ page for common questions
 - Clear hero and value proposition
 - Services overview
-- Audience fit / who the service is for
-- Simple workflow explanation
-- FAQ section
-- Contact CTA
+- Direct contact CTA
 - Basic SEO metadata and crawlability support
+- Honest, concise copy that explains the service quickly
 
 ## Out of scope for V1
 
@@ -26,6 +25,7 @@
 - Messaging is honest and clear.
 - Contact path is real and functional.
 - Layout works cleanly on mobile and desktop.
+- FAQ page is accessible from the site and answers practical questions.
 - The page passes format, lint, typecheck, and build validation.
 - Documentation is sufficient for a new contributor to continue safely.
 - Placeholder business details are either replaced or clearly marked.
