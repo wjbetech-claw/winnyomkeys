@@ -26,6 +26,7 @@ A production-minded landing page for a Seoul-based mechanical keyboard repair, b
 - TypeScript (strict)
 - ESLint
 - Prettier
+- Tailwind CSS
 - GitHub Actions CI
 
 ## Getting started

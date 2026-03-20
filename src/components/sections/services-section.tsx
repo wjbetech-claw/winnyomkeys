@@ -1,9 +1,24 @@
-import styles from "@/app/page.module.css";
 import type { Service } from "@/content/site";
 
 type ServicesSectionProps = {
   services: Service[];
 };
+
+const sectionClass = "mt-8 grid gap-4";
+const headerClass =
+  "grid justify-items-center gap-2 text-center [scroll-margin-top:120px]";
+const titleClass =
+  "max-w-[24ch] text-[clamp(1.9rem,4vw,3.2rem)] font-bold leading-[1.04] tracking-[-0.05em] text-balance";
+const gridClass = "grid gap-4 lg:grid-cols-2";
+const cardClass =
+  "grid gap-2 rounded-[24px] border border-[var(--border)] bg-[var(--surface)] p-[22px] shadow-[0_28px_80px_rgba(0,0,0,0.22)]";
+const topRowClass = "flex items-center justify-between gap-3";
+const iconClass =
+  "inline-flex h-[46px] w-[46px] items-center justify-center rounded-[14px] border border-[rgba(255,255,255,0.08)] bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03)),rgba(10,12,16,0.4)] text-[rgba(232,238,249,0.92)]";
+const indexClass =
+  "mb-0 text-[0.74rem] uppercase tracking-[0.18em] text-[var(--muted)]";
+const headingClass = "mt-0.5 text-[1.12rem] leading-[1.35] font-semibold";
+const bodyClass = "m-0 leading-[1.72] text-[var(--soft-text)]";
 
 function ServiceIcon({ title }: { title: string }) {
   if (title === "Repairs") {
@@ -40,32 +55,27 @@ function ServiceIcon({ title }: { title: string }) {
 export function ServicesSection({ services }: ServicesSectionProps) {
   return (
     <section
-      className={`${styles.section} ${styles.servicesSection}`}
+      className={sectionClass}
       id="services"
       aria-labelledby="services-title"
     >
-      <div
-        className={`${styles.sectionHeader} ${styles.servicesHeader}`}
-        id="services-header"
-      >
-        <h2 id="services-title">
+      <div className={headerClass} id="services-header">
+        <h2 id="services-title" className={titleClass}>
           Focused work for mechanical keyboards that need attention, refinement,
           or a full build path.
         </h2>
       </div>
-      <div className={styles.serviceGrid}>
+      <div className={gridClass}>
         {services.map((service, index) => (
-          <article className={styles.serviceCard} key={service.title}>
-            <div className={styles.serviceCardTop}>
-              <span className={styles.serviceIcon}>
+          <article className={cardClass} key={service.title}>
+            <div className={topRowClass}>
+              <span className={iconClass}>
                 <ServiceIcon title={service.title} />
               </span>
-              <p className={styles.cardIndex}>
-                {String(index + 1).padStart(2, "0")}
-              </p>
+              <p className={indexClass}>{String(index + 1).padStart(2, "0")}</p>
             </div>
-            <h3>{service.title}</h3>
-            <p>{service.description}</p>
+            <h3 className={headingClass}>{service.title}</h3>
+            <p className={bodyClass}>{service.description}</p>
           </article>
         ))}
       </div>

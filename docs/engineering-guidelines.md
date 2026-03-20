@@ -5,7 +5,7 @@
 - Next.js 16 / App Router
 - React 19
 - TypeScript strict mode
-- CSS Modules with global design tokens
+- Tailwind CSS utilities with global design tokens
 
 ## Architecture overview
 
@@ -30,8 +30,8 @@
 
 ## Styling rules
 
+- use Tailwind utilities for page/component-specific styles
 - use global CSS only for tokens, resets, and app-wide primitives
-- use CSS Modules for page/component-specific styles
 - prefer consistent tokens over one-off values
 
 ## SEO / performance expectations
