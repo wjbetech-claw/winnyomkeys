@@ -37,26 +37,21 @@ export function ThemeToggle() {
 
   const nextTheme = theme === "dark" ? "light" : "dark";
 
-  const buttonClass =
-    "inline-flex min-h-11 min-w-11 cursor-pointer items-center justify-center rounded-full border border-[var(--border)] bg-[var(--pill-bg)] text-[var(--foreground)] transition-[background-color,border-color] duration-200 hover:bg-[var(--pill-hover)] focus-visible:bg-[var(--pill-hover)]";
-  const trackClass = "inline-flex items-center gap-2 px-3";
-  const iconClass =
-    "inline-flex w-[18px] items-center justify-center text-[0.95rem]";
-  const labelClass = "text-[0.82rem] font-semibold capitalize";
-
   return (
     <button
       type="button"
-      className={buttonClass}
+      className="inline-flex min-h-11 min-w-11 cursor-pointer items-center justify-center rounded-full border border-(--border) bg-(--pill-bg) text-(--foreground) transition-[background-color,border-color] duration-200 hover:bg-(--pill-hover) focus-visible:bg-(--pill-hover)"
       onClick={() => {
         setTheme(nextTheme);
       }}
       aria-label={`Switch to ${nextTheme} theme`}
       title={`Switch to ${nextTheme} theme`}
     >
-      <span className={trackClass}>
-        <span className={iconClass}>{theme === "dark" ? "☾" : "☀"}</span>
-        <span className={labelClass}>{theme}</span>
+      <span className="inline-flex items-center gap-2 px-3">
+        <span className="inline-flex w-4.5 items-center justify-center text-[0.95rem]">
+          {theme === "dark" ? "☾" : "☀"}
+        </span>
+        <span className="text-[0.82rem] font-semibold capitalize">{theme}</span>
       </span>
     </button>
   );
