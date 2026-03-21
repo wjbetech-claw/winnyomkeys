@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  --font-ui: var(--font-inter);
   --background: #06070a;
   --foreground: #f4f6f8;
   --surface: rgba(15, 18, 24, 0.78);
@@ -36,6 +37,10 @@ html[data-theme="light"] {
     linear-gradient(180deg, #f8f4ed 0%, #f0e8dc 100%);
 }
 
+html[data-locale="ko"] {
+  --font-ui: var(--font-noto-sans-kr);
+}
+
 @layer base {
   html {
     color-scheme: dark;
@@ -52,7 +57,7 @@ html[data-theme="light"] {
     margin: 0;
     color: var(--foreground);
     background: var(--hero-bg);
-    font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+    font-family: var(--font-ui), Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     transition:
@@ -89,5 +94,23 @@ html[data-theme="light"] {
   :focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  html[data-locale="ko"] .ko-copy {
+    word-break: keep-all;
+    line-break: strict;
+  }
+
+  html[data-locale="ko"] .ko-tight-balance {
+    text-wrap: pretty;
+    word-break: keep-all;
+    line-break: strict;
+  }
+
+  html[data-locale="ko"] .ko-tagline {
+    text-transform: none;
+    letter-spacing: 0.06em;
   }
 }

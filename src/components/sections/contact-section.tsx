@@ -1,22 +1,26 @@
 import { SiGithub, SiInstagram, SiX } from "react-icons/si";
 
-export function ContactSection() {
+type ContactSectionProps = {
+  title: string;
+  description: string;
+};
+
+export function ContactSection({ title, description }: ContactSectionProps) {
   return (
     <section
-      className="mx-auto mt-16 mb-16 grid w-full max-w-7xl justify-items-center gap-8 px-0 py-10 text-center lg:mt-24 lg:mb-24 h-150 content-center scroll-mt-5"
+      className="mx-auto mt-16 mb-16 grid min-h-[36rem] w-full max-w-7xl content-center justify-items-center gap-8 px-0 py-10 text-center scroll-mt-5 lg:mt-24 lg:mb-24 lg:min-h-[37.5rem]"
       id="contact"
       aria-labelledby="contact-title"
     >
       <div className="grid justify-items-center gap-4 text-center">
         <h2
           id="contact-title"
-          className="max-w-[18ch] text-[clamp(1.9rem,4vw,3.2rem)] font-semibold leading-[1.04] tracking-[-0.05em] text-balance"
+          className="ko-tight-balance max-w-[18ch] text-[clamp(1.9rem,4vw,3.2rem)] font-semibold leading-[1.04] tracking-[-0.05em] text-balance"
         >
-          Let&apos;s get started.
+          {title}
         </h2>
-        <p className="max-w-[44ch] leading-[1.72] text-(--soft-text)">
-          Send the keyboard model, what feels wrong or what you want improved,
-          any relevant parts, and we can take it from there.
+        <p className="ko-copy max-w-[44ch] leading-[1.72] text-(--soft-text)">
+          {description}
         </p>
       </div>
       <div className="grid w-full max-w-3xl justify-items-center gap-5">
