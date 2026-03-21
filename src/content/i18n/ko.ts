@@ -2,14 +2,14 @@ import type { Dictionary } from "./types";
 
 export const ko: Dictionary = {
   metadata: {
-    title: "위니옴키즈",
+    title: "윈념키즈",
     description:
       "서울에서 진행하는 기계식 키보드 수리, 조립, 튜닝, 트러블슈팅 및 실용적인 상담 서비스.",
   },
   brand: {
-    name: "winnyomkeys",
+    name: "윈념키즈",
     tagline: "기계식 키보드 | 서울",
-    homeAriaLabel: "위니옴키즈 홈",
+    homeAriaLabel: "윈념키즈 홈",
   },
   nav: {
     home: "홈",

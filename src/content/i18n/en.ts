@@ -2,14 +2,14 @@ import type { Dictionary } from "./types";
 
 export const en: Dictionary = {
   metadata: {
-    title: "Winny Omkeys",
+    title: "winnyomkeys",
     description:
       "Mechanical keyboard repair, builds, tuning, and troubleshooting in Seoul, with practical guidance for both beginners and enthusiasts.",
   },
   brand: {
     name: "winnyomkeys",
     tagline: "Mech. Keyboards | Seoul",
-    homeAriaLabel: "WinnyomKeys home",
+    homeAriaLabel: "winnyomkeys home",
   },
   nav: {
     home: "Home",

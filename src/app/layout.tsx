@@ -20,8 +20,8 @@ const notoSansKr = Noto_Sans_KR({
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
-  applicationName: "Winny Omkeys",
-  title: "Winny Omkeys",
+  applicationName: "winnyomkeys",
+  title: "winnyomkeys",
   description:
     "Mechanical keyboard repair, builds, tuning, and troubleshooting in Seoul.",
 };
